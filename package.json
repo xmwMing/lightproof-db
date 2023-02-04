@@ -1,0 +1,33 @@
+{
+  "name": "lightproof-db",
+  "version": "2.1.0",
+  "description": "Lightproof-db for antelope stores the block id, number and active nodes for each block.",
+  "bin": "index.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "pkg ."
+  },
+  "author": "0rigin.one",
+  "license": "MIT",
+  "dependencies": {
+    "@grpc/grpc-js": "^1.7.3",
+    "@grpc/proto-loader": "^0.7.2",
+    "axios": "^1.3.4",
+    "dotenv": "^16.0.2",
+    "enf-eosjs": "^23.0.0-rc4",
+    "ioredis": "^5.3.2",
+    "lmdb": "^2.6.0-alpha7",
+    "protobufjs": "^6.10.2",
+    "ws": "^8.11.0"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.0"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/lmdb",
+      "proto/**/*.proto"
+    ]
+  }
+}
