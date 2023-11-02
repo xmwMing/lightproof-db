@@ -168,7 +168,8 @@ class SYNC {
 
         let block_num = response.this_block.block_num;
 
-        redis.setex(block_num + "_sync", 3000, JSON.stringify(result));
+        redis.setex(block_num + "_sync", 300, JSON.stringify(result));
+
 
         console.log("块:" + block_num + ",交易数 :" + (transactions.length - 1))
 
